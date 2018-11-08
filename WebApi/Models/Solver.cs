@@ -136,7 +136,7 @@ namespace PeopleNet.MazeSolver.Models
 					blocked[curPoint.X - 1, curPoint.Y] = true;
 				}
 				// Check Right
-				if( curPoint.X < blocked.GetLength(0) && !blocked[curPoint.X + 1, curPoint.Y] )
+				if( curPoint.X < blocked.GetLength(0) - 1 && !blocked[curPoint.X + 1, curPoint.Y] )
 				{
 					queue.Enqueue( new Point( curPoint.X + 1, curPoint.Y, curPoint ) );
 					blocked[curPoint.X + 1, curPoint.Y] = true;
